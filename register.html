@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bear With Me</title>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="downloads/jquery.js"></script>
+    <script src="downloads/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".btn-character").on("click", function(){
+          $("#character-selection button").removeClass("selected");
+          $(this).addClass("selected");
+          var character = $(this).data("character");
+          var agent_number = character.replace("animal", "");
+
+          $(".profile-picture").attr("src","img/"+character+".png");
+          $(".character-bio.selected").removeClass("selected").hide();
+          $(".agent-"+agent_number).addClass("selected").show();
+        });
+
+        $(".btn-gender").on("click", function(){
+          $("#gender-selection button").removeClass("selected");
+          $(this).addClass("selected");
+        });
+
+        $("#go-button").on("click", function(){
+          location.href = "map.html";
+          if (app.Name == "Safari") {
+            window.location ="map.html";
+          }
+        });
+
+        $(".triangle").on("click", function(){
+          $(".triangle1").animate({ 
+            top: "-710px",
+          }, 2000 );
+          $(".triangle2").animate({ 
+            right: "-710px",
+          }, 2000 );
+          $(".triangle3").animate({ 
+            bottom: "-710px",
+          }, 2000 );
+          $(".triangle4").animate({ 
+            left: "-710px",
+          }, 2000 );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img class="triangle triangle1" src="img/TOP.png" style="position:absolute;margin-left: -40px; z-index: 1001;"/>
+    <img class="triangle triangle2" src="img/RIGHT.png" style="position:absolute;margin-left: -40px; z-index: 1001;"/>
+    <img class="triangle triangle3" src="img/BOTTOM.png" style="position:absolute;margin-left: -40px; z-index: 1001;"/>
+    <img class="triangle triangle4" src="img/LEFT.png" style="position:absolute;margin-left: -40px; z-index: 1001;"/>
+    <br/><br/><br/>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3 class="text-center" style="display: inline; position: absolute; margin-top: 1px;">YOUR INFO</h3>
+        <img src="img/adorn1.png" style="margin-left: 109px;"/>
+        <div class="border-white">
+          <form class="form-horizontal" id="register-form " action="http://phpoll.com/register/process" method="post" role="form" style="display: block; padding-left: 5px; padding-right: 5px">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control transparent-input" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Age</label>
+              <div class="col-sm-10">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control transparent-input" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div id="gender-selection">
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-gender selected" data-character="animal1">
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/boy.png" data-holder-rendered="true"> <br/>Boy</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-gender" data-character="animal2">
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/girl.png" data-holder-rendered="true"> <br/>Girl</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Favourite Color</label>
+              <div class="col-sm-10">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control transparent-input" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Favourite Food</label>
+              <div class="col-sm-10">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control transparent-input" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Hobbies</label>
+              <div class="col-sm-10">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control transparent-input" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Submit">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>  
+      </div>
+      <div class="col-md-3">
+        <h3 class="text-center" style="display: inline; margin-top: 1px;">THE AGENTS</h3>
+        <div class="border-white">
+          <div id="character-selection">
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default btn-character selected" data-character="animal1">
+                  <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/bear-head-1.png" data-holder-rendered="true"> Agent Who</button>
+              </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default btn-character" data-character="animal2">
+                  <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/bear-head-2.png" data-holder-rendered="true"> Agent What</button>
+              </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default btn-character" data-character="animal3">
+                  <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/bear-head-3.png" data-holder-rendered="true"> Agent Where</button>
+              </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default btn-character" data-character="animal4">
+                  <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/bear-head-4.png" data-holder-rendered="true"> Agent When</button>
+              </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default btn-character" data-character="animal5">
+                  <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/bear-head-5.png" data-holder-rendered="true"> Agent Why</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h3 class="text-center" style="display: inline; position: absolute; margin-top: 1px;">AGENT INFO</h3>
+        <img src="img/adorn1.png" style="margin-left: 189px;"/>
+        <div class="border-white" style="height:300px;">
+          <div class="row">
+            <div class="col-sm-6">
+              <div id="character-display">
+                <img class="img-rounded profile-picture" src="img/animal1.png"/>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <h3>Bio</h3>
+              <div class="character-bio agent-1 selected">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <p>Name: </p>
+                        <p>Age: </p>
+                        <p>Species: </p>
+                      </div>
+                      <div class="col-sm-6">
+                        <p>Who</p>
+                        <p>34</p>
+                        <p>Grisley</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12 text-center">
+                        <img src="img/paw2.png" style="margin-top: 27px;"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="character-bio agent-2" style="display:none;">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <p>Name: </p>
+                        <p>Age: </p>
+                        <p>Species: </p>
+                      </div>
+                      <div class="col-sm-6">
+                        <p>Who</p>
+                        <p>12</p>
+                        <p>Koala</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12 text-center">
+                        <img src="img/paw.png" style="margin-top: 27px;"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <img src="img/side-adorn.png" style="margin-left: 349px; position: absolute; margin-top: -3px;"/>
+        <div class="border-white" style="padding-left: 5px; width: 354px;">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="character-bio agent-1 selected">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>Interests: </p>
+                    <p>Favourite Color: </p>
+                    <p>Favourite Food: </p>
+                    <p>Best Friend: </p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p>Finding out about people</p>
+                    <p>Blue</p>
+                    <p>Honey</p>
+                    <p>Bearney Bear</p>
+                  </div>
+                </div>
+              </div>
+              <div class="character-bio agent-2" style="display:none;">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>Interests: </p>
+                    <p>Favourite Color: </p>
+                    <p>Favourite Food: </p>
+                    <p>Best Friend: </p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p>Finding out how things work</p>
+                    <p>Green</p>
+                    <p>Eucalyptus Leaves</p>
+                    <p>Bertie Bear</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="border-white" style="margin-top: 7px;">
+          <a style="height: 70px;display:block;width:927px;" href="map.html">
+            <img src="img/footerstrip.png" id="go-button">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
