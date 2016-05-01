@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -17,11 +17,21 @@
   </head>
 
   <body>
+    <!--adding facebook activity javascript-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <header>
       <div class="inner">
         <h1>Bear-with-me</h1>
         <h2>An interactive fun app to promote implicit learning for children</h2>
-        <a href="https://github.com/SylvDownes/Bear-With-Me" class="button"><small>View project on</small> GitHub</a>
+        <img src="https://raw.githubusercontent.com/SylvDownes/Bear-With-Me/gh-pages/img/logo-bear.png" style= "width:150px; position: absolute; right:0; top: 0;"/>
       </div>
     </header>
 
@@ -47,21 +57,25 @@
 
 <h3>
 <a id="social-media-bits" class="anchor" href="#social-media-bits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Social Media bits.</h3>
+       <a data-pin-do="embedBoard" data-pin-board-width="900" data-pin-scale-height="320" data-pin-scale-width="115" href="https://www.pinterest.com/AgentBears/characters/"></a>
+       
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/SylvDownes/Bear-With-Me/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
+          <a href="http://sylvdownes.github.io/Bear-With-Me/register.html" class="button" style="font-size:16px;">
+            Click to see prototype
           </a>
-          <a href="https://github.com/SylvDownes/Bear-With-Me/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+         
+         
+          <a class="twitter-timeline" href="https://twitter.com/AgentBears" data-widget-id="726803963580919809">Tweets by @AgentBears</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        
+        
+            <div class="fb-page" data-href="https://www.facebook.com/Bear-With-Me-1674964009434484/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+         
+          <p> is maintained by SylvDownes</p>
 
-          <p class="repo-owner"><a href="https://github.com/SylvDownes/Bear-With-Me"></a> is maintained by <a href="https://github.com/SylvDownes">SylvDownes</a>.</p>
-
-          <p>This page was created by Sylv Downes></p>
+          <p>This page was created by Sylv Downes</p>
+        
         </aside>
       </div>
     </div>
