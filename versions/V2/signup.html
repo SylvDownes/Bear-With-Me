@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bear With Me</title>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="downloads/jquery.js"></script>
+    <script src="downloads/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".btn-character").on("click", function(){
+          $("#character-selection button").removeClass("selected");
+          $(this).addClass("selected");
+          var character = $(this).data("character");
+          $("#character-display img").attr("src","img/"+character+".jpeg");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="dashboard">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <h3 class="text-center">Step 1</h3>
+            <div class="signup-step"></div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h3 class="text-center">Step 2</h3>
+            <div class="signup-step dashed-sides">
+              <div id="character-selection">
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-character selected" data-character="animal1">
+                      <span class="glyphicon glyphicon-triangle-right arrow"></span>
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/animal1.jpeg" data-holder-rendered="true" style="width: 70px; height: 70px;"> Character</button>
+                  </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-character" data-character="animal2">
+                      <span class="glyphicon glyphicon-triangle-right arrow"></span>
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/animal2.jpeg" data-holder-rendered="true" style="width: 70px; height: 70px;"> Character</button>
+                  </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-character" data-character="animal3">
+                      <span class="glyphicon glyphicon-triangle-right arrow"></span>
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/animal3.jpeg" data-holder-rendered="true" style="width: 70px; height: 70px;"> Character</button>
+                  </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-character" data-character="animal4">
+                      <span class="glyphicon glyphicon-triangle-right arrow"></span>
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/animal4.jpeg" data-holder-rendered="true" style="width: 70px; height: 70px;"> Character</button>
+                  </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-character" data-character="animal5">
+                      <span class="glyphicon glyphicon-triangle-right arrow"></span>
+                      <img data-src="holder.js/140x140" class="img-circle" alt="140x140" src="img/animal5.jpeg" data-holder-rendered="true" style="width: 70px; height: 70px;"> Character</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h3 class="text-center">Step 3</h3>
+            <div class="signup-step">
+              <div id="character-display">
+                <img class="img-responsive" src="img/animal1.jpeg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </body>
+</html>

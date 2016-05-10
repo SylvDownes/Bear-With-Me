@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bear With Me</title>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="downloads/jquery.js"></script>
+    <script src="downloads/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      body{
+        background-image: url("img/australia.png");
+      }
+    </style>
+    <script type="text/javascript">
+      var ua = navigator.userAgent,
+              event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+      $(document).ready(function(){
+        $("#video").on("click", function(){
+          location.href = "https://www.youtube.com/embed/KfZKxcAo5tw";
+          if (app.Name == "Safari") {
+            window.location ="https://www.youtube.com/embed/KfZKxcAo5tw";
+          }
+        });
+        $("#back-button").on("click", function(){
+          location.href = "map.html";
+          if (app.Name == "Safari") {
+            window.location ="map.html";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <br/><br/>
+    <div id="video" style="position: relative; height: 160px; top: 327px; width: 243px; left: 598px;"></div>
+    <button class="btn btn-default btn-lg" id="back-button" style="font-size: 30px; color: rgb(12, 49, 82); bottom: 0px; position: relative; left: 817px; top: 395px; height: 64px;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+  </body>
+</html>
