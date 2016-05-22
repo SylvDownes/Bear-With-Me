@@ -546,19 +546,23 @@ aside a.button {
 }
 aside a.button-blue {
   display: block;
-  width: 138px;
-  padding-left: 20px;
+  font-size: 17px; 
+  width: 205px; 
+  text-align: center; 
+  padding-left: 0px; 
+  padding-top: 22px;
   margin-bottom: 20px;
-  font-size: 21px;
   background: transparent url(../images/download-button-2.png) 0 0 no-repeat;
 }
 
 aside a.button-green {
   display: block;
-  width: 138px;
-  padding-left: 20px;
+  font-size: 17px; 
+  width: 205px; 
+  text-align: center; 
+  padding-left: 0px; 
+  padding-top: 22px;
   margin-bottom: 20px;
-  font-size: 21px;
   background: transparent url(../images/download-button-3.png) 0 0 no-repeat;
 }
 code, pre {
